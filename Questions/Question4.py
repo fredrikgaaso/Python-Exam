@@ -1,10 +1,12 @@
 import random
 
 LIST_LENGTH = 10
+START = 1
+END = 50
 
 
 def main():
-    randomNumber = [random.randint(1, 50) for i in range(LIST_LENGTH)]
+    randomNumber = [random.randint(START, END) for i in range(LIST_LENGTH)]
     print(randomNumber)
 
     def substitute():
