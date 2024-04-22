@@ -17,8 +17,8 @@ def main():
             self.sid = sid
 
         def get_stuinfo(self):
-            print("Student ID : ", self.sid)
             Person.get_info(self)
+            print("Student ID : ", self.sid)
 
     class Employee(Person):
         def __init__(self, fname, lname, age, enumber, salary):
@@ -29,9 +29,9 @@ def main():
             self.salary = salary
 
         def get_empinfo(self):
+            Person.get_info(self)
             print("Employee ID : ", self.enumber)
             print("Salary : ", self.salary, "USD")
-            Person.get_info(self)
 
     new_student = Student("Anthony", "Smith", 35, "s346571")
     new_student.get_stuinfo()
