@@ -13,6 +13,7 @@ def main():
             positive_number.append(user_input)
         if int(user_input) < 0:
             negative_number.append(user_input)
+    #Bytte til loop?
     print(positive_number + zeros + negative_number)
 
 main()
