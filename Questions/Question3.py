@@ -1,3 +1,9 @@
+"""
+We have chosen to append twice to the output to show that
+the program actually appends and not just replaces the existing message
+"""
+
+
 def main():
     class Message:
 
