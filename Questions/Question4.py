@@ -1,3 +1,8 @@
+"""
+We have chosen to use "constants" to increase readability, and
+make it easier for the user to adjust the parameters of the program
+"""
+
 import random
 
 LIST_LENGTH = 10
