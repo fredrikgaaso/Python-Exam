@@ -6,32 +6,28 @@ def main():
             self.age = age
 
         def get_info(self):
-            print("Full name : ", self.fname, self.lname)
-            print("Age : ", self.age)
+            print("Full name:", self.fname, self.lname)
+            print("Age:", self.age)
 
     class Student(Person):
-        def __init__(self, fname, lname, age, sid):
-            self.fname = fname
-            self.lname = lname
-            self.age = age
-            self.sid = sid
+        def __init__(self, fname, lname, age, studentid):
+            super().__init__(fname, lname, age)
+            self.studentid = studentid
 
         def get_stuinfo(self):
-            Person.get_info(self)
-            print("Student ID : ", self.sid)
+            self.get_info()
+            print("Student ID:", self.studentid)
 
     class Employee(Person):
-        def __init__(self, fname, lname, age, enumber, salary):
-            self.fname = fname
-            self.lname = lname
-            self.age = age
-            self.enumber = enumber
+        def __init__(self, fname, lname, age, employeenumber, salary):
+            super().__init__(fname, lname, age)
+            self.employeenumber = employeenumber
             self.salary = salary
 
         def get_empinfo(self):
-            Person.get_info(self)
-            print("Employee ID : ", self.enumber)
-            print("Salary : ", self.salary, "USD")
+            self.get_info()
+            print("Employee No:", self.employeenumber)
+            print("Salary:", self.salary, "USD")
 
     new_student = Student("Anthony", "Smith", 35, "s346571")
     new_student.get_stuinfo()
