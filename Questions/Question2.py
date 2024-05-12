@@ -1,13 +1,13 @@
 def main():
-    class Student():
+    class Student:
         passingMark = 50
 
         def __init__(self, name, mark):
             self.name = name
             self.mark = mark
 
-        def __str__(self, name, mark):
-            return f"{name} + {mark}"
+        def __str__(self):
+            return f"{self.name} - {self.mark}"
 
         def passOrFail(self):
             if self.mark >= Student.passingMark:
@@ -15,22 +15,23 @@ def main():
             else:
                 return "Fail"
 
+    print("Passing mark 50:")
     student1 = Student("John", 52)
     status1 = student1.passOrFail()
-    print("John status: " + status1)
+    print(student1, "->", status1)
 
     student2 = Student("Jenny", 69)
     status2 = student2.passOrFail()
-    print("Jenny satus: " + status2)
+    print(student2, "->", status2)
 
-    #Updating the passing mark to check the pass or fail function
+    print("\nUpdating the passing mark to 60:")
     Student.passingMark = 60
 
     status1 = student1.passOrFail()
-    print("John status: " + status1)
+    print(student1, "->", status1)
 
     status2 = student2.passOrFail()
-    print("Jenny satus: " + status2)
+    print(student2, "->", status2)
 
 
 main()
