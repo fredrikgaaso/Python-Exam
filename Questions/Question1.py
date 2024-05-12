@@ -1,3 +1,9 @@
+"""
+The variable names and flow of the program is self-explanatory,
+therefore we have chosen not to include inline comments
+"""
+
+
 def main():
     class Person:
         def __init__(self, fname, lname, age):
